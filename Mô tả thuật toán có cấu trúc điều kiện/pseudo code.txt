@@ -1,21 +1,21 @@
-Begin
-			Input DIEM
-				DIEM =x
-			Ifx >= 75 		
-				Display " Xếp loại A"		
-			Esle 
-				If 60 =< x < 75
-					Display " Xếp loại B"
-				Esle
-				     If 45= <x < 60
-						Display "Xếp loại C"
-			   	     Esle	
-					   If 35= <x < 45	
-						Display "Xếp loại D "
-					   Esle x < 35 
-						  Display " Xếp loại E"
-					   End If
-				     End If 	
-				End If	
-			End If
-		End
+BEGIN
+			INPUT DIEM
+				DIEM =X
+			IFX >= 75 		
+				DISPLAY " XẾP LOẠI A"		
+			ESLE 
+				IF 60 =< X < 75
+					DISPLAY " XẾP LOẠI B"
+				ESLE
+				     IF 45= <X < 60
+						DISPLAY "XẾP LOẠI C"
+			   	     ESLE	
+					   IF 35= <X < 45	
+						DISPLAY "XẾP LOẠI D "
+					   ESLE X < 35 
+						  DISPLAY " XẾP LOẠI E"
+					   END IF
+				     END IF 	
+				END IF	
+			END IF
+		END					

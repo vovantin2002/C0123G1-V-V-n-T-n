@@ -1,13 +1,13 @@
-Begin
-   Input N
-               a1,a2,a3,.....,aN
-               Max = a1 , i = 2
-while 
-  Do  If  i  > N 
-        Display " i là giá trị lớn nhất "
-        End If 
-        If ai > Max then Max = ai 
+BEGIN
+   INPUT n
+               a1,a2,a3,.....,an
+               MAX = a1 , i = 2
+WHILE (i<n)
+  DO  IF  i  > n 
+        DISPLAY " i là giá trị lớn nhất "
+        END IF 
+        IF ai > max then max = ai 
          i=i+1 
-  End Do
-End 
+  END DO
+END
 
