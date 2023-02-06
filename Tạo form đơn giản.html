@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <style>
+
+
+
+        h1 {
+            color: white;
+           background: orangered;
+            text-align: center;
+        }
+        #yourname {
+            color: blue;
+        }
+        #check {
+            color: chocolate;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+    <form>
+        <h1>SỞ THÍCH CỦA BẠN</h1>
+        <div id="yourname">
+            <label>Your name</label>
+            <input type="text" name="Your name"><br>
+            <labe>Email</labe>
+            <input type="text" name="Email"><br>
+            <label>hobby</label>
+        </div>
+        <div id="check">
+            <tr>
+                <input type="checkbox"name="hobby">Thể thao
+                <input type="checkbox"name="hobby">Âm nhạc
+                <input type="checkbox"name="hobby">Đọc sách
+            </tr><br>
+            <tr>
+                <input type="checkbox"name="hobby">Lướt web
+                <input type="checkbox"name="hobby">Chơi game
+                <input type="checkbox"name="hobby">Điện ảnh
+            </tr><br>
+            <input type="checkbox"name="hobby">Du lịch<br>
+
+
+            <button type="submit" >Submit Form</button>
+            <button type="submit" >Reset Form</button>
+        </div>
+    </form>
+</fieldset>
+</body>
+</html>
