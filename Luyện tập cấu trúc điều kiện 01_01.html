@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-
+<input type="number" id="sothunhat" placeholder="nhap so thu nhat">
+<input type="number" id="sothuhai" placeholder="nhap so thu hai">
+<br><br>
+<button onclick="check()">check</button>
+<p id="result"></p>
 </body>
 </html>
+<script>
+    function check(){
+        let a = document.getElementById("sothunhat").value;
+        let b = document.getElementById("sothuhai").value;
+        if (a%b===0)
+            document.getElementById("result").innerHTML = "a chia het cho b"
+        else
+            document.getElementById("result").innerHTML = "a khong chia het cho b"
+
+    }
+</script>
