@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết chương trình tính lãi ngân hàng</h3><br>
+<b>So tien ban dau: </b><br><br>
+<input type="number" id="sotienbandau" ><br><br>
+<b>Lai suat hang thang: </b><br><br>
+<input type="number" id="laisuathangthang" ><br><br>
+<b>So thang </b><br><br>
+<input type="number" id="sothang" ><br><br>
+<button onclick="check()" >Tinh lai</button>
+</body>
+</html>
+<script>
+    function check(){
+        let sotienbandau= +document.getElementById("sotienbandau").value;
+        let sothang= +document.getElementById("sothang").value;
+        let sotienphaitra= Math.round(sotienbandau*Math.pow(1+((laisuathangthang)/100),sothang));
+        document.write("so tien phai tra la: "+ sotienphaitra + "vnd");
+    }
+</script>

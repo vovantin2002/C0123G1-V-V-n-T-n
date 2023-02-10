@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Giải phương trình bậc 2 co dang  ax2+bx+c=0 (a≠0)</h3>
+<h4> nghiệm phương trình bậc 2 nhanh:<br>
+
+    Nếu a+b+c=0 thì x1 = 1, x2 = c/a<br>
+    Nếu a-b+c=0 thì x1 = -1, x2 = -c/a</h4>
+</body>
+</html>
+<script>
+  let a= +prompt("nhap a:");
+  let b= +prompt("nhap b:");
+  let c= +prompt("nhap c:");
+  if (a+b+c===0){
+    document.write("phuong trinh co hai nghiem la x1=1, x2=" +(c/a) );
+   }else{
+    document.write("phuong trinh co nghiem la x1=-1, x2=" +(-c/a));
+  }
+</script>

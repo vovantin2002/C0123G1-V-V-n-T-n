@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let sotienbandau= +prompt("nhap so tien ban dau (trieu vnd)");
+  let sothang= +prompt("nhap so thang");
+  let laihangthang= +prompt("nhap lai hang thang");
+  let sotienphaitra= Math.round(sotienbandau*Math.pow(1+((sothang)/100),laihangthang));
+  document.write("so tien phai tra la: " + sotienphaitra)
+</script>

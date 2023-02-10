@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tính thuế thu nhập cá nhân theo thang</h3>
+</body>
+</html>
+<script>
+  let thunhaptinhthue= +prompt("nhap thu nhap cua ban(trieu vnd)");
+  if(thunhaptinhthue<=5){
+    document.write("thue phai tra la "+thunhaptinhthue*5/100+"trieu vnd");
+  }else if(5<thunhaptinhthue&&thunhaptinhthue<10){
+    document.write("thue phai tra la "+thunhaptinhthue*10/100+"trieu vnd");
+  }else if(10<thunhaptinhthue&&thunhaptinhthue<18){
+    document.write("thue phai tra la "+thunhaptinhthue*15/100+"trieu vnd");
+  }else if(18<thunhaptinhthue&&thunhaptinhthue<32){
+    document.write("thue phai tra la "+thunhaptinhthue*20/100+"trieu vnd");
+  }else if(32<thunhaptinhthue&&thunhaptinhthue<52){
+    document.write("thue phai tra la "+thunhaptinhthue*25/100+"trieu vnd");
+  }else if(52<thunhaptinhthue&&thunhaptinhthue<80){
+    document.write("thue phai tra la "+thunhaptinhthue*30/100+"trieu vnd");
+  }else if(80<thunhaptinhthue){
+    document.write("thue phai tra la "+thunhaptinhthue*35/100+"trieu vnd");
+  }
+</script>
+

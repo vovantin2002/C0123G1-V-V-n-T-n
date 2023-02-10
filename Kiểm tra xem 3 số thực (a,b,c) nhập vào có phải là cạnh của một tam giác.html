@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác</h3>
+</body>
+</html>
+<script>
+  let a= +prompt("nhap a:");
+  let b= +prompt("nhap b:");
+  let c= +prompt("nhap c:");
+  if (a>0&&b>0&&c>0 || a+b>c||b+c>a||a+c>b){
+      document.write("day la ba canh cua tam giac");
+  } else{
+      document.write("vui long nhap lai");
+}
+</script>
