@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let diemkiemtra= +prompt("nhap vao diem kiem tra");
+  let diemgiuaki= +prompt("nhap vao diem kiem tra giua ki");
+  let diemcuoiki= +prompt("nhap vao diem kiem tra cuoi ki");
+  let diemTB = parseFloat(((diemkiemtra)+(diemgiuaki*2)+(diemcuoiki*3))/6);
+  if (diemTB<5 ){
+    document.write("xep loai D");
+  }else if(5<diemTB<=7){
+    document.write("xep loai C");
+  }else if(7<diemTB<=8){
+    document.write("xep loai B");
+  }else {
+    document.write("xep loai A");
+  }
+</script>
+</body>
+</html>

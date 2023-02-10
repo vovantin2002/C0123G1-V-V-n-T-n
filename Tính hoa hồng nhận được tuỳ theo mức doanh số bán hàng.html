@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="doanhso" placeholder="nhap doanh so">doanhso
+<br><br>
+<input type="number" id="hoahong" placeholder="nhap hoa hong">hoahong
+<br><br>
+<button onclick="check()">check</button>
+<br><br>
+<p id="result"></p>
+<script>
+    function check() {
+        let doanhso =document.getElementById("doanhso").value;
+        let hoahong =document.getElementById("hoahong").value;
+        let result =doanhso*hoahong;
+        document.getElementById("result").innerHTML="hoa Hồng:" + result;
+    }
+</script>
+</body>
+</html>
