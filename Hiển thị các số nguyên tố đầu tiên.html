@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number= parseInt(prompt("nhap n: "));
+    check(number);
+  function check(number) {
+      let cout = 0;
+      let coutflag = 0;
+      for (let i = 2; i < 100; i++) {
+          if (coutflag < number) {
+              for (let j = 1; j <= i; j++) {
+                  if (i%j === 0) {
+                      cout++;
+                  }
+              }
+              if (cout === 2) {
+                  document.write(i + "<br>");
+                  coutflag++;
+              }
+              cout = 0;
+          } else {
+              break;
+          }
+
+
+      }
+  }
+</script>
+</body>
+</html>
