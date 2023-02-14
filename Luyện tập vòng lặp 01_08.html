@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="choi()">choi</button>
+</body>
+</html>
+<script>
+    function choi(){
+       let number= +prompt("so ban  muốn đoán trong khoảng nào: ");
+       let ran= Math.floor(Math.random()*number);
+        let check = +prompt ("Nhập số bạn đoán:");
+        let count = 0;
+        while (check !== ran) {
+            count++;
+            if (count === 4) {
+                alert("Bạn hết số lần đoán");
+                break;
+            } else if (check < ran) {
+                alert("Số bạn đoán bé hơn");
+            } else if(check > ran){
+                alert ("Số bạn đoán lớn hơn");
+            }
+            check = prompt ("Nhập số bạn đoán");
+        }
+        if (count === 4) {
+            document.write("Bạn hết số lần đoán");
+        } else {
+            document.write("Bạn đã đoán đúng số");
+        }
+    }
+</script>
