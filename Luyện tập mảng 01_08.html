@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let i,j,tg;
+  let number=[1,2,3,4,3,12,11,13,14,15];
+  for(let i =0; i< 10;i++) {
+      for (let j = i + 1; j< 10;j++){
+          if (number[j] > number[i]){
+              let tg = number[i];
+              number[i] = number[j];
+              number[j] = tg;
+          }
+      }
+  }document.write(number);
+</script>

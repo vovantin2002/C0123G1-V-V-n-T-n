@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let i;
+  //bai 1
+let myColor= ["Red","Green","White","Black"];
+  document.write(myColor.join(","));
+    document.write("<br>");
+    //bai 2
+  let number=prompt("nhap so: ");
+  let num= [number[0]];
+  for(i=0;i<number.length;i++) {
+      if ((number[i-1] % 2 === 0) &&( number[i]%2===0)) {
+          num.push('-',number[i]);
+      } else {
+          num.push(number[i]);
+      }
+  }document.write(num.join(''));
+  document.write("<br>");
+  //bai 3
+    let str = prompt("nhap vao chuoi: ");
+let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+let result = [];
+
+    for(i=0; i<str.length; i++) {
+        if(UPPER.indexOf(str[i]) !== -1){
+            result.push(str[i].toLowerCase());
+        }else if(LOWER.indexOf(str[i]) !== -1) {
+            result.push(str[i].toUpperCase());
+        }
+        else {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
