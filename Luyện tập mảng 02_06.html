@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>y
+</html>
+<script>
+    let i;
+    let a=prompt("nhap vao mang ky tu: ");
+    let arr=[];
+    for (i=0;i<a.length;i++) {
+        if (a[i] === "-") {
+            arr.push("_");
+        }else{
+            arr.push(a[i]);
+        }
+    }document.write(arr.join(""));
+</script>

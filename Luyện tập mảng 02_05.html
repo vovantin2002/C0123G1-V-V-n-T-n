@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let i;
+  let result= "hai chuoi giong nhau";
+  let arr1=prompt("nhap vao chuoi dau tien: ");
+  let arr2=prompt("nhap vao chuoi thu hai: ");
+  for (i=0; i<(arr1.length+arr2.length);i++) {
+      if (arr1[i]!==arr2[i]) {
+          result="hai chuoi khong giong nhau";
+          document.write(result);
+          break;
+      }
+  }document.write(result);
+</script>
