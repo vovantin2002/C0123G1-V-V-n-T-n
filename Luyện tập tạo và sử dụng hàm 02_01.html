@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = +prompt("nhap so muon tinh binh phuong vao: ");
+    let result;
+
+    function tinhSquare(number) {
+        result = number * number;
+        return result;
+    }
+
+    result = tinhSquare(number);
+    document.write("binh phuong cua " + number + "la: " + tinhSquare(number));
+    tinhSquare(number);
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let r = +prompt("nhap vao ban kinh tron: ");
+    let result;
+    let result1;
+
+    //ham tinh dien tich
+
+    function tinhS(r) {
+        result = (r * r) * 3.14;
+        return result;
+    }
+
+    result = tinhS(r);
+    document.write("dien tich hinh tron la: " + tinhS(r) + "<br>");
+
+    //ham tinh chu vi
+    function tinhC(r) {
+        result1 = r * 2 * 3.14;
+        return result1;
+    }
+
+    result1 = tinhC(r);
+    document.write("chu vi hinh tron la: " + tinhC(r));
+</script>

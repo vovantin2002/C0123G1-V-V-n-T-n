@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = prompt("nhap ten ngoi sao: ");
+    let result;
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function check(arr) {
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === arr) {
+                result = arr2[i];
+                document.write(result);
+                return result;
+            }
+        }
+        document.write("khong tim thay ngoi sao nao");
+
+    }
+
+    check(arr);
+
+</script>

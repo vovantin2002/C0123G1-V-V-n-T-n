@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = +prompt("nhap so can kiem tra: ");
+    check(number);
+
+
+    function check(number) {
+        let cout = 0;
+        if ((number === 0) || (number === 1)) {
+            document.write(number + " khong la so nguyen to");
+        } else {
+            for (let i = 0; i <= number; i++) {
+                if (number % i === 0) {
+                    cout += 1;
+                }
+                if (cout === 2) {
+                    document.write(number + "la so nguyen to");
+                }
+
+            }
+        }
+    }
+</script>
