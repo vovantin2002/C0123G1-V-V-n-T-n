@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = +prompt("nhap so nguyen can tinh giai thua: ");
+    let giaiThua = 1;
+
+    function tinhGiaiThua(number) {
+
+        for (let i = 1; i <= number; i++) {
+            giaiThua = giaiThua * i;
+        }
+        return giaiThua;
+
+    }
+
+    tinhGiaiThua(giaiThua);
+    document.write("giai thua cua " + number + "la: " + tinhGiaiThua(number));
+</script>

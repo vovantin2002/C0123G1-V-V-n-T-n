@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = [3];
+    let number1 = +prompt("nhap so thu nhat: ")
+    let number2 = +prompt("nhap so thu hai: ")
+    let number3 = +prompt("nhap so thu ba: ")
+
+    function check(number) {
+        for (let i = 0; i < number.length; i++) {
+            if ((number1 > number2) && (number2 > number3)) {
+                document.write(number3);
+            } else if ((number1 > number2) && (number2 < number3)) {
+                document.write(number2);
+            } else if ((number1 < number2) && (number1 < number3)) {
+                document.write(number1);
+            } else {
+                document.write("vui long nhap lai");
+            }
+        }
+    }
+
+    check(number);
+</script>
