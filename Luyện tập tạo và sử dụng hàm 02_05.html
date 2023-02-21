@@ -10,11 +10,10 @@
 </html>
 <script>
     let number = [3];
-    let number1 = +prompt("nhap so thu nhat: ")
-    let number2 = +prompt("nhap so thu hai: ")
-    let number3 = +prompt("nhap so thu ba: ")
-
     function check(number) {
+        let number1 = +prompt("nhap so thu nhat: ")
+        let number2 = +prompt("nhap so thu hai: ")
+        let number3 = +prompt("nhap so thu ba: ")
         for (let i = 0; i < number.length; i++) {
             if ((number1 > number2) && (number2 > number3)) {
                 document.write(number3);
@@ -27,6 +26,5 @@
             }
         }
     }
-
     check(number);
 </script>
