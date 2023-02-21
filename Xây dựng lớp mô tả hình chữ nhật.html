@@ -2,31 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
 <canvas id="DemoCanvas" width="200" height="100"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        getArea() {
+            return this.width * this.height;
+        }
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+    }
+    var a = +prompt("nhap chieu dai vao: ");
+    var b = +prompt("nhap chieu rong vao: ");
+    let myRectangle = new Rectangle(a, b);
+    let area = myRectangle.getArea();
+    let perimeter = myRectangle.getPerimeter();
+    document.write("dien tich hinh chu nhat la: " + area + "<br>");
+    document.write("chu vi hinh chu nhat la: " + perimeter + "<br>" + "<br>" + "<br>" + "<br>");
+    let canvas = document.getElementById("DemoCanvas");
+    if (canvas.getContext) {
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#fa4b2a';
+        ctx.fillRect(10, 40, 140, 160);
+    }
+</script>
 </body>
 </html>
-<script>
-    let canvas = document.getElementById("DemoCanvas");
-    if (canvas.getContext){
-    let ctx = canvas.getContext('2d');
-    ctx.fillStyle='#fa4b2a';    // color of fill
-    ctx.fillRect(10, 40, 140, 160); // create rectangle
-  }
-    class Rectangle{
-    constructor(chieudai, chieurong, dientich, chuvi){
-    this.chieudai=chieudai;
-      this.chieurong=chieurong;
-      this. dientich=dientich;
-      this.chuvi=chuvi;
-  }
-  getName(){
-      return this.chieudai;
-  }
-    }
-
-
-
-</script>
