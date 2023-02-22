@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight) {
+            this.weight = weight;
+        }
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        decrease() {
+            if (this.isEmpty()) {
+                return "Tao da het.";
+            } else {
+                this.weight--;
+            }
+        }
+    }
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeigh(weight) {
+            this.weight = weight;
+        }
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        getGender(isMale) {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+        say(string) {
+            console.log(string);
+        }
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decrease();
+                this.weight++;
+            } else
+                return "Tao da het";
+        }
+        getHuman(human) {
+            return "Ten:" + this.name + " " + "Gioi tinh:" + this.gender + " " + "Can nang:" + this.weight;
+        }
+    }
+    let adam = new Human("adam", 1, 60);
+    let eva = new Human("eva", 2, 50);
+    let apple = new Apple(10);
+    adam.say("Hello Eva" + "<br>");
+    eva.say("Hello Adam" + "<br>");
+    while (apple.isEmpty() !== true) {
+        document.write("Adam an tao" + "<br>");
+        adam.eat(apple);
+        document.write("Qua tao con: " + apple.getWeight() + "dv" + "<br>");
+        document.write("Can nang cua Adam: " + adam.getWeight() + "<br>");
+        document.write("<br>");
+        document.write("Eva an tao" + "<br>");
+        eva.eat(apple);
+        document.write("Qua tao con: " + apple.getWeight() + "dv" + "<br>");
+        document.write("Can nang cua Eva: " + eva.getWeight() + "<br>");
+    }
+</script>
+</body>
+</html>

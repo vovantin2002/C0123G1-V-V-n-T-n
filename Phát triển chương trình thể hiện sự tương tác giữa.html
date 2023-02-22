@@ -2,22 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
-
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        getStatus() {
+            return this.status;
+        }
+    }
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        getLamp() {
+            return this.lamp;
+        }
+        setLamp(lamp) {
+            this.lamp = lamp;
+        }
+        connectToLamp(Electriclamp) {
+            return this.lamp = Electriclamp;
+        }
+        Off() {
+            this.lamp = false;
+            return this.status = false;
+        }
+        On() {
+            this.lamp = true;
+            return this.status = true;
+        }
+    }
+    let electricLamp = new ElectricLamp(false);
+    let switchButton = new SwitchButton(electricLamp, false);
+    for (let i = 0; i < 5; i++) {
+        document.write(switchButton.On() + "<br>" + " cong tac den bat " + "<br>");
+        document.write(electricLamp.getStatus() + "<br>" + " cong tac den tat " + "<br>");
+    }
+</script>
 </body>
 </html>
-<script>
-  class SwitchButton{
-    constructor(status, lamp){
-      this.status=status;
-      this.lamp=lamp;
-    }getLamp(){
-      return this.lamp;
-    }setLamp(lamp){
-      this.lamp=lamp;
-    }
-
-  }
-</script>
