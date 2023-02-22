@@ -11,6 +11,11 @@
 <script>
     class Temperature {
         constructor(doC) {
+            while (doC < -273) {
+                {
+                    doC = prompt("Nhiệt độ phải lớn hơn -273,mời nhập lại");
+                }
+            }
             this.doC = doC;
         }
 
@@ -27,7 +32,7 @@
         }
     }
     let myTemperature = new Temperature(25);
-    let doC = myTemperature.getDoC();
+    let doC = +prompt("nhap do C: ");
     document.write("nhiet do K la: " + myTemperature.getDoK() + "<br>");
     document.write("nhiet do F la: " + myTemperature.getDoF());
 </script>
