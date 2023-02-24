@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [10];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt("nhap phan tu thu " + i + " cua mang: ");
+    }
+    document.write("mang da nhap la: " + arr + "<br>");
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if ((arr[i] % 2 === 0) && (i % 2 !== 0)) {
+            sum = sum + arr[i];
+        }
+    }
+    document.write("sum la: " + sum);
+</script>

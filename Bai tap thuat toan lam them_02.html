@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [10];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt("nhap phan tu thu " + i + " cua mang: ");
+    }
+    document.write("mang da nhap la: " + arr + "<br>");
+    let result = "";
+    let cout = 0;
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] % 2 === 0) {
+            cout++;
+        } else {
+            count++;
+        }
+    }
+    if (cout === count) {
+        result = "OK";
+    } else {
+        result = "NO";
+    }
+    document.write(result);
+</script>

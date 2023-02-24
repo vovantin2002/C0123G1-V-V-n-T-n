@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [1, 2, 3, 4];
+
+    function check(arr) {
+        let n = arr[1] - arr[0];
+        let cout = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i + 1] - arr[i] === n) {
+                cout++;
+            }
+        }
+        if (cout === arr.length - 1) {
+            document.write("true");
+            return true;
+        }
+        document.write("fale");
+        return false;
+    }
+    check(arr);
+</script>
