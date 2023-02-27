@@ -9,13 +9,14 @@
 </body>
 </html>
 <script>
-  for(let i=5; i>=0; i--){
-    for(let j=i; j<5; j++){
-        if(j===3||j===4){
-            document.write()
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j > 1 && j < i && i !== 5) {
+                document.write("&nbsp&nbsp");
+            } else {
+                document.write("*");
+            }
         }
-      document.write ("*");
-    }document.write("<br>");
-
-  }
+        document.write("<br>");
+    }
 </script>

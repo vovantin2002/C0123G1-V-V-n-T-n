@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let h = +prompt("nhap chieu cao tam giac can: ");
+    for (let i = 0; i < h; i++) {
+        for (let k = h; k > i; k--) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let j = 0; j < i * 2 - 1; j++) {
+            if(j)
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
