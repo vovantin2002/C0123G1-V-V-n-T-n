@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let maxFraction = 0;
+    let result;
+    for (let i = 0; i < 3; i++) {
+        result = numerators[i] / denominators[i];
+        document.write(result + "<br>");
+        if (maxFraction < result) {
+            maxFraction = result;
+        }
+    }
+    document.write("chỉ số của phân số lớn nhất là: " + maxFraction);
+</script>

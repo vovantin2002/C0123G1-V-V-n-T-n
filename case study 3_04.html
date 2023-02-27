@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<p> // 1.Cafe(10k)-->
+<!--  // 2.Cam vắt(15k)-->
+<!--  // 3.Nước ép cà rốt(14k)-->
+<!--  // 4.Nước ép cà chua(13k)-->
+<!--  // 5.Nước lọc(5k)-->
+<!--  // 6.Nước dừa(11k)-->
+<!--  //7.không chọn nữa</p>-->
+<button id="order">order</button>
+</body>
+</html>
+<script>
+    // 1.Cafe(10k)
+    // 2.Cam vắt(15k)
+    // 3.Nước ép cà rốt(14k)
+    // 4.Nước ép cà chua(13k)
+    // 5.Nước lọc(5k)
+    // 6.Nước dừa(11k)
+    //7.không chọn nữa
+
+    do {
+        alert("menu: " + "<br>" +
+            "1.Cafe" + "<br>" +
+            " 2.Cam vắt" + "<br>" +
+            "3.Nước ép cà rốt" + "<br>" +
+            "4.Nước ép cà chua" + "<br>" +
+            "5.Nước lọc" + "<br>" +
+            "6.Nước dừa" + "<br>" +
+            +"7.không chọn nữa");
+        let option = +prompt("Nhap lua chon cua khach hang");
+        document.write(option);
+        let result = 0;
+        for (let i = 1; i <= 7; i++) {
+            switch (option) {
+                case 1 :
+                    alert("1.Cafe(10k)");
+                case 2:
+                    alert(" 2.Cam vắt(15k)");
+                case 3 :
+                    alert("3.Nước ép cà rốt(14k)");
+                case 4 :
+                    alert("4.Nước ép cà chua(13k)");
+                case 5 :
+                    alert("5.Nước lọc(5k)");
+                case 6 :
+                    alert("6.Nước dừa(11k)");
+                default:
+                    alert("không chọn nữa");
+            }
+        }
+    } while (option > 0 && option < 7);
+
+
+</script>
