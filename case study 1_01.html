@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>tinh luong rong cua nhan vien </h3>
+</body>
+</html>
+<script>
+    let luong = +prompt("nhap luong cua nhan vien(trieu vnd): ");
+    if (luong === 15) {
+        document.write("luong cua nhan vien nhan duoc la: " + (luong - (luong * 20 / 100)));
+    }
+    if ((7 < luong) && (luong < 15)) {
+        document.write("luong cua nhan vien nhan duoc la: " + (luong - (luong * 10 / 100)));
+    }
+    if (luong < 7) {
+        document.write("luong cua nhan vien nhan duoc la: " + (luong - (luong * 5 / 100)));
+    }
+</script>

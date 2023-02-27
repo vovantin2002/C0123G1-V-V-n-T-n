@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let result;
+    let arr = ["o", "u", "i", "a", "e", "O", "U", "I", "A", "E"];
+    let nhap = prompt("nhap ki tu muon kiem tra: ");
+    for (let i = 0; i < arr.length; i++) {
+        if (nhap === arr[i]) {
+            result = " la nguyen am";
+            break;
+        } else {
+            result = "la phu am";
+        }
+    }
+    document.write(result);
+</script>
