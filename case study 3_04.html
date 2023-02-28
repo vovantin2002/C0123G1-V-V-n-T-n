@@ -5,56 +5,65 @@
     <title>Title</title>
 </head>
 <body>
-<!--<p> // 1.Cafe(10k)-->
-<!--  // 2.Cam vắt(15k)-->
-<!--  // 3.Nước ép cà rốt(14k)-->
-<!--  // 4.Nước ép cà chua(13k)-->
-<!--  // 5.Nước lọc(5k)-->
-<!--  // 6.Nước dừa(11k)-->
-<!--  //7.không chọn nữa</p>-->
-<button id="order">order</button>
+<div>
+    <p>Menu: <br>
+        1.Cafe(10k) <br>
+        2.Cam vắt(15k)<br>
+        3.Nước ép cà rốt(14k)<br>
+        4.Nước ép cà chua(13k)<br>
+        5.Nước lọc(5k)<br>
+        6.Nước dừa(11k)<br>
+        7.không chọn nữa</p>
+    <hr>
+    chon san pham:<input type="number" id="sanpham" placeholder="chon san pham">
+    so luong:<input type="number" id="soluong" placeholder="nhap so luong">
+    <br>
+    <button onclick="tinhtien()">tinh tien</button>
+</div>
+<p id="bill"></p>
+<p id="sum"></p>
 </body>
 </html>
 <script>
-    // 1.Cafe(10k)
-    // 2.Cam vắt(15k)
-    // 3.Nước ép cà rốt(14k)
-    // 4.Nước ép cà chua(13k)
-    // 5.Nước lọc(5k)
-    // 6.Nước dừa(11k)
-    //7.không chọn nữa
+    let bill = "";
+    let sum = 0;
+    function tinhtien() {
 
-    do {
-        alert("menu: " + "<br>" +
-            "1.Cafe" + "<br>" +
-            " 2.Cam vắt" + "<br>" +
-            "3.Nước ép cà rốt" + "<br>" +
-            "4.Nước ép cà chua" + "<br>" +
-            "5.Nước lọc" + "<br>" +
-            "6.Nước dừa" + "<br>" +
-            +"7.không chọn nữa");
-        let option = +prompt("Nhap lua chon cua khach hang");
-        document.write(option);
-        let result = 0;
-        for (let i = 1; i <= 7; i++) {
-            switch (option) {
-                case 1 :
-                    alert("1.Cafe(10k)");
-                case 2:
-                    alert(" 2.Cam vắt(15k)");
-                case 3 :
-                    alert("3.Nước ép cà rốt(14k)");
-                case 4 :
-                    alert("4.Nước ép cà chua(13k)");
-                case 5 :
-                    alert("5.Nước lọc(5k)");
-                case 6 :
-                    alert("6.Nước dừa(11k)");
-                default:
-                    alert("không chọn nữa");
-            }
+        let option = +document.getElementById("sanpham").value;
+        let price = 0;
+        let soLuong = +document.getElementById("soluong").value;
+        switch (option) {
+            case 1 :
+                price = 10;
+                bill += "Cafe " + soLuong + " ly: " + price * soLuong + "K" + "<br>";
+
+                break;
+            case 2:
+                price = 15;
+                bill += "Cam vắt " + soLuong + " ly: " + price * soLuong + "K" + "<br>";
+                break;
+            case 3 :
+                price = 14;
+                bill += "Nước ép cà rốt " + soLuong + " ly: " + price * soLuong + "K" + "<br>";
+                break;
+            case 4 :
+                price = 13;
+                bill += "Nước ép cà chua " + soLuong + " ly: " + price * soLuong + "K" + "<br>";
+                break;
+            case 5 :
+                price = 5;
+                bill += "Nước lọc " + soLuong + " ly: " + price * soLuong + "K" + "<br>";
+                break;
+            case 6 :
+                price = 11;
+                bill += "Nước dừa " + soLuong + " ly: " + price * soLuong + "K" + "<br>";
+                break;
+            default:
+                alert("không chọn nữa");
+                break;
         }
-    } while (option > 0 && option < 7);
-
-
+        sum += (price * soLuong);
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("sum").innerHTML ="Tong tien phai tra la: "+ sum+"K";
+    }
 </script>

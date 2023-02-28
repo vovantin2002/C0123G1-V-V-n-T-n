@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let s = "cabca";
+    let arr = [];
+    let cout = 0;
+    let flag = true;
+    for (let i = 0; i < s.length; i++) {
+        if (arr.indexOf(s[i]) === -1) {
+            cout++;
+            arr.push(s[i]);
+        }
+    }
+    document.write(arr + "<br>" + cout)
+</script>

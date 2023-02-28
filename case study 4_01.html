@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let string = prompt("Nhập xâu kí tự:");
+    document.write("xâu kí tự chưa được chuẩn hóa: " + string + "<br>");
+    function normalization(str) {
+        let convertToArray = str.toLowerCase().split(' ');
+        alert(convertToArray);
+        let result = convertToArray.map(function (val) {
+            return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+        });
+        return result.join(' ');
+    }
+    document.write("Xâu kí tự đã được chuẩn hóa: " + normalization(string) + "<br>");
+    normalization(string);
+    function searchLength(str) {
+        let words = str.split(' ');
+        let maxLength = 0;
+        let c;
+        for (let i = 0; i < words.length; i++) {
+            if (words[i].length > maxLength) {
+                maxLength = words[i].length;
+                c = words[i];
+            }
+        }
+        return c;
+    }
+    document.write("Từ dài nhất trong chuỗi là: " + searchLength(string));
+    searchLength(string);
+</script>
