@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let m = +prompt("nhap kich thuoc m");
+    let n = +prompt("nhap kich thuoc n");
+    let arr = [];
+    let arrNew = [];
+
+    function count(arr) {
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt("nhap phan tu");
+                let dem = 0;
+                for (let k = 1; k < arr[i][j]; k++) {
+                    if (arr[i][j] % k === 0) {
+                        dem++;
+                    }
+                }
+                if (dem < 2 && arr[i][j] > 1) {
+                    arrNew.push(arr[i][j]);
+                }
+            }
+        }
+        document.write("Mảng 2 chiều đã nhập: " + arr + "<br>");
+        document.write("Số nguyên tố trong mảng là: " + arrNew);
+    }
+    count(arr);
+</script>
