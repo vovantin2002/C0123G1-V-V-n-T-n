@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a1 = "zzccnn";
+    let a2 = "zcddb";
+    let a3 = [];
+    let arr = a1.split("");
+    let arr2 = [];
+    let flag = true;
+    for (let i = 0; i < a2.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (a2[i].includes(arr[j])) {
+                a3.push(a2[i]);
+                arr.splice(j, 1);
+                break;
+            }
+        }
+    }
+    document.write("commonCharacterCount(s1, s2) =" + a3 + "<br>");
+    for (let i = 0; i < a3.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (a3[i] === arr2[j]) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            arr2.push(a3[i]);
+        }
+    }
+    document.write("2 xâu a1 và s2 có" + " " + a3.length + " " + "kí tự chung là:" + "<br>");
+    for (let i = 0; i < arr2.length; i++) {
+        let count = 0;
+        for (let j = 0; j < a3.length; j++) {
+            if (arr2[i] === a3[j]) {
+                count++;
+            }
+        }
+        document.write(+count + " " + "ký tự" + " " + arr2[i] + "<br>");
+    }
+</script>
