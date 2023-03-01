@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form>
+        <h2 style="color: dodgerblue">Biểu mẫu thêm - sửa học sinh</h2>
+        Mã học vien:<input id="studentCode" type="number" placeholder="Nhập mã học viên ">
+        Tên:<input id="nameStudent" type="text" placeholder="Nhập họ và ten ">
+        Email:<input id="email" type="text" placeholder="Nhập email "><br><br>
+        Ngày sinh:<input id="birthday" type="date">
+        Lớp:<input id="classes" type="text" placeholder="Nhập lớp ">
+        Module:<input id="module" type="number" placeholder="chọn module "><br>
+        <button type="button" onclick="createStudent()">Thêm</button>
+    </form>
+</div>
+<hr>
+<h2 style="color: #FA8176">Danh sách các học sinh</h2>
+<div id="tableStudentList">
+
+</div>
+
+</body>
+</html>
+<script>
+    class Student {
+        constructor(studentCode, studentName, email, birthday, classes, module) {
+            this.studentCode = studentCode;
+            this.studentName = studentName;
+            this.email = email;
+            this.birthday = birthday;
+            this.classes = classes;
+            this.module = module;
+        }
+    }
+
+    let student1 = new Student("HV-0001", "Nguyen Van A", "nguyenvana@gmail.com", "2004/1/1", "C1022G1", "1");
+    let student2 = new Student("HV-0002", "Nguyen Van B", "nguyenvanb@gmail.com", "2004/2/2", "C1122G1", "1");
+    let student3 = new Student("HV-0003", "Nguyen Thi C", "nguyenthic@gmail.com", "2004/3/3", "C1222G1", "1");
+    let studentList = [];
+    studentList.push(student1);
+    studentList.push(student2);
+    studentList.push(student3);
+    displayStudentList(studentList);
+
+    //
+    function displayStudentList(studentList) {
+        let table = "<table  border='1' style='border-collapse: collapse'>";
+        table += "<tr>" +
+            "<th>STT</th>" +
+            " <th>Mã học viên</th>" +
+            "<th>Tên</th>" +
+            "<th>Email</th>" +
+            "<th>Ngày sinh</th>" +
+            "<th>Lớp</th>" +
+            " <th>Module</th>" +
+            "<th colspan='2' >Thao tác</th>" +
+            "</tr>";
+        for (let i = 0; i < studentList.length; i++) {
+            table += "<tr>" +
+                "<td>" + i + "</td>" +
+                "<td>" + studentList[i].studentCode + "</td>" +
+                "<td>" + studentList[i].studentName + "</td>" +
+                "<td>" + studentList[i].email + "</td>" +
+                "<td>" + studentList[i].birthday + "</td>" +
+                "<td>" + studentList[i].classes + "</td>" +
+                "<td>" + studentList[i].module + "</td>" +
+                "<td><button onclick='deleteStudent(" + i + ")'>xóa</button></td>" +
+                "<td><button onclick='updateStudent()' >sửa</button></td>" +
+                "</tr>"
+        }
+        table += "</table>";
+
+
+        document.getElementById("tableStudentList").innerHTML = table;
+    }
+
+    //
+    function deleteStudent(indexStudent) {
+        const confirmDelete = confirm("Bạn muốn xoá học sinh " +
+            studentList[indexStudent].studentName + " ko?");
+        if (confirmDelete) {
+            studentList.splice(indexStudent, 1);
+            alert("Bạn đã xoá thành công.");
+            displayStudentList(studentList);
+        } else {
+            alert("Bạn đã không xoá.");
+        }
+    }
+
+    //
+    function createStudent() {
+        let studentCode = document.getElementById("studentCode").value;
+        let name = document.getElementById("nameStudent").value;
+        let email = document.getElementById("email").value;
+        let birthday = document.getElementById("birthday").value;
+        let classes = document.getElementById("classes").value;
+        let module = document.getElementById("module").value;
+        let newStudent = new Student(studentCode, name, email, birthday, classes, module);
+        studentList.push(newStudent);
+        displayStudentList(studentList);
+        document.getElementById("studentCode").value = "";
+        document.getElementById("nameStudent").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("birthday").value = "";
+        document.getElementById("classes").value = "";
+        document.getElementById("module").value = "";
+    }
+
+</script>
